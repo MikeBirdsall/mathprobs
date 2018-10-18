@@ -1,0 +1,27 @@
+A town of 1000 households has a strange law intended to prevent wealth-hoarding. On January 1 of every year, each household robs one other household, selected at random, moving all of that house’s money into their own house. The order in which the robberies take place is also random and is determined by a lottery. (Note that if House A robs House B first, and then C robs A, the houses of A and B would each be empty and C would have acquired the resources of both A and B.)
+
+Two questions about this fateful day:
+
+What is the probability that a house is not robbed over the course of the day?
+
+Suppose that every house has the same amount of cash to begin with — say $100.
+Which position in the lottery has the most expected cash at the end of the day,
+and what is that amount?
+
+
+1 - probability not robbed
+I can interpret this in two ways: What is the probability that (A) a particular
+house H is not robbed, and what is the probability that (B) any house is not
+robbed.  For 1A, on each of 1000 draws the house has a probability 1/1000 of
+being drawn, and a probability 999/1000 of not being drawn. The total
+probability of not being drawn is the probability of not being drawn each time,
+or 999/1000, to the power of the number of draws, 1000. So 999/1000 ^ 1000, or
+.36769542...
+
+For 1B, the probability that every house is drawn, is the probability that no
+house is drawn twice. So the first draw is obviously an as yet undrawn house,
+the second draw is 999/1000, the third is 998/1000, the fourth is 997/1000, ...
+so the total probability is 999!/1000^999 or 4.02e-433, or an infinitesimal
+probability that some house won't be skipped. 
+
+
